@@ -1,0 +1,31 @@
+Flask==3.0.3
+python-dotenv==1.0.1
+pytest==8.3.3
+Flask-SQLAlchemy==3.1.1
+psycopg2-binary==2.9.10
+Flask-Migrate==4.0.7
+pydantic>=2.9,<3
+email-validator==2.2.0
+Flask-JWT-Extended==4.7.1
+celery>=5.3.0
+redis>=5.0.0
+croniter>=6.0.0
+cryptography>=42.0.0
+
+# LLM provider SDKs — required by openai_adapter.py, anthropic_adapter.py,
+# and gemini_adapter.py respectively.  These were previously absent, causing
+# ModuleNotFoundError on any non-mocked provider call.
+openai>=1.0.0
+anthropic>=0.25.0
+google-generativeai>=0.5.0
+
+# HTTP & Web
+requests>=2.31.0
+Flask-CORS>=4.0.0
+
+# Real Agent Dependencies
+reportlab>=4.0.0          # PDF report generation
+pdfplumber>=0.10.0        # PDF text extraction for document research
+openpyxl>=3.1.0           # Excel file parsing for data analysis
+duckduckgo-search>=6.0.0  # Live web search for document research
+pandas>=2.0.0             # Data analysis and manipulation
